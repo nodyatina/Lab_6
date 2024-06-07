@@ -11,7 +11,12 @@ using System;
     }
 
     public void SetState(ISubmarineState state)
+
     {
+            if (state == null)
+            {
+                throw new ArgumentNullException( "Состояние подводной лодки не может быть null^C^");
+            }
         _state = state;
     }
 
